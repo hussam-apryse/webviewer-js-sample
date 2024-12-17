@@ -14,17 +14,13 @@ steps:
   inputs:
     versionSpec: '20.x'
   displayName: 'Install Node.js'
-
 - script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
-
-- script: 
+    npm ci
+  displayName: 'Install dependencies'
+- script: |
     npx playwright install --with-deps
   displayName: 'Install Playwright and Playwright browsers'
-
-- script:
+- script: |
     npx playwright test
   displayName: 'Run Playwright tests'
   env:
