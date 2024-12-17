@@ -25,7 +25,7 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: 'e2e-junit-resulta.xml'
+    testResultsFiles: 'results.xml'
     mergeTestResults: true
     failTaskOnFailedTests: true
     testRunTitle: 'End-To-End Tests'
