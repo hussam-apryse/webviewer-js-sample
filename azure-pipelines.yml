@@ -25,3 +25,14 @@ steps:
   displayName: 'Run Playwright tests'
   env:
    CI: 'true'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: 'playwright-report'
+    artifact: 'playwright-report'
+    publishLocation: 'pipeline'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/e2e-*.xml'
