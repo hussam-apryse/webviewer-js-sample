@@ -25,5 +25,5 @@ steps:
   displayName: 'Install Playwright and Playwright browsers'
 
 - script:
-    npm run test
+    npx playwright test
   displayName: 'Run Playwright tests'
