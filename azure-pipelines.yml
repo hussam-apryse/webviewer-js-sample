@@ -27,3 +27,5 @@ steps:
 - script:
     npx playwright test
   displayName: 'Run Playwright tests'
+  env:
+   CI: 'true'
